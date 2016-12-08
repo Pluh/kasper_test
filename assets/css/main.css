@@ -1,11 +1,25 @@
-@keyframes fadeinup {
+@-webkit-keyframes fadeinup {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeinup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /* Colors */
@@ -48,9 +62,12 @@
 }
 .background-wrap.overlay-enable .form-help-top {
   visibility: visible;
-  animation-name: fadeinup;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
+  -webkit-animation-name: fadeinup;
+          animation-name: fadeinup;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .background-wrap.overlay-enable .subtitle {
   color: #ffffff;
@@ -70,6 +87,7 @@
   top: 0;
   bottom: 0;
   background-color: transparent;
+  -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
 }
 
@@ -102,7 +120,8 @@
   right: 0;
   margin: 0 auto;
   padding: 14px 0;
-  border-radius: 15px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
   background-color: #ffffff;
   color: #505050;
   font-size: 19px;
@@ -126,7 +145,8 @@
   height: auto;
   padding: 5px 35px;
   background-color: transparent;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: 2px solid #ffffff;
   font-size: 60px;
   letter-spacing: 1px;
@@ -153,8 +173,14 @@ footer {
   background-color: #000000;
 }
 footer .footer-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);

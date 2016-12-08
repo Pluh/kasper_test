@@ -15,7 +15,17 @@ module.exports = function (grunt) {
     //     dest: 'assets/compiled/',
     //   }
     // },
-
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 12 version']})
+        ]
+      },
+      dist: {
+        	src: 'assets/css/*.css',
+      }
+    },
     cssmin: {
       target: {
         files: [{
@@ -107,6 +117,7 @@ module.exports = function (grunt) {
   });
 
   // 3. Тут мы указываем Grunt, что хотим использовать этот плагин
+	grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -117,6 +128,5 @@ module.exports = function (grunt) {
   // grunt.loadNpmTasks('grunt-ftp-deploy');
 
   // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
-  grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'concat', /*'ftp-deploy'*/]);
-
+    grunt.registerTask('default', ['sass','postcss','cssmin', 'uglify', 'concat' ]);
 };
