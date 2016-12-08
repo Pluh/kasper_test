@@ -1,0 +1,12 @@
+footer {
+  background-color: #000000;
+  .footer-wrap {
+    @include vertical-align();
+  }
+  .social-wrap {
+    float: right;
+  }
+  .logo-footer {
+    text-align: center;
+  }
+}

@@ -1,0 +1,31 @@
+@import "project/_mixins.scss";
+@import "project/_animation.scss";
+@import "project/_vars.scss";
+
+@import "project/_main.scss";
+@import "project/_footer.scss";
+@include sticky-footer($footer-height, ".page-wrap", "#root-footer", "footer");
+
+
+:focus {
+  outline: none;
+}
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.2;
+  // font-family: $font-roboto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}

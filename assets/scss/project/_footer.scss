@@ -1,0 +1,26 @@
+footer {
+  background-color: #000000;
+  .footer-wrap {
+		display: flex;
+		justify-content: space-between;
+    @include vertical-align();
+		& > * {
+			width: 33%;
+		}
+  }
+  .footer-social {
+		text-align: right;
+		.footer-social-wrap {
+			padding-right: 6vw;
+			.social-icon{
+				margin-right: 20px;
+			}
+		}
+  }
+  .footer-logo {
+    text-align: center;
+  }
+}
+.social-svg {
+	fill: #ffffff;
+}
